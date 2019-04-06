@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.Linq;
 using Microsoft.AspNetCore.Mvc;
 using SimpleWebApi.Data;
 using SimpleWebApi.Entities;
@@ -21,6 +22,13 @@ namespace SimpleWebApi.Controllers
         {
             var books = context.Books;
             return books;
+        }
+
+        [HttpGet("{id}")]
+        public ActionResult<Book> Get(int id)
+        {
+            var book = context.Books.FirstOrDefault(b => b.BookId.Equals(id));
+            return book;
         }
     }
 }
