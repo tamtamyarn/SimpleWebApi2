@@ -1,1 +1,1 @@
-https://qiita.com/tamtamyarn/items/5a755d4d5d59592a82cd
+https://qiita.com/tamtamyarn/items/71dec4e747a9a523b24f
