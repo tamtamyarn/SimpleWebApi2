@@ -19,7 +19,7 @@ namespace SimpleWebApi.Controllers
         }
 
         [HttpGet]
-        public ActionResult<IEnumerable<Book>> Get()
+        public ActionResult<IEnumerable<Book>> List()
         {
             var books = context.Books;
             return books;
