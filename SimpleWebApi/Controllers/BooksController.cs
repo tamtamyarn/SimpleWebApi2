@@ -26,22 +26,22 @@ namespace SimpleWebApi.Controllers
         }
 
         [HttpGet("{id}")]
-        public ActionResult<Book> GetById(int id)
+        public ActionResult<Book> Get(int id)
         {
             var book = context.Books.FirstOrDefault(b => b.BookId.Equals(id));
             return book;
         }
 
         [HttpPost]
-        public ActionResult<Book> Post(Book book)
+        public ActionResult<Book> Create(Book book)
         {
             context.Books.Add(book);
             context.SaveChanges();
-            return CreatedAtAction(nameof(GetById), new { id = book.BookId }, book);
+            return CreatedAtAction(nameof(Get), new { id = book.BookId }, book);
         }
 
         [HttpPut("{id}")]
-        public IActionResult Put(int id, Book book)
+        public IActionResult Update(int id, Book book)
         {
             if (id != book.BookId)
             {
