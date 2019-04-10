@@ -5,7 +5,6 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using SimpleWebApi.Data;
-using NJsonSchema;
 using NSwag.AspNetCore;
 
 namespace SimpleWebApi
